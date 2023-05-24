@@ -5,7 +5,7 @@ import java.util.Optional;
 
 public class CodeRunner {
     public static void main(String[] args) {
-        List newList = List.of(1, 2, 3, 10, 4, 5, 7, 8, 9, 11, 12, 6, 15, 16, 19);
+        List newList = List.of(1, 2, -4, -5, 3, 10, 4, 5, 7, 8, 9, 11, 12, 6, 15, 16, 19);
         StreamsExample se = new StreamsExample();
         int newSum = se.returnSumFromList(newList);
         int newMax = se.returnMaxFromList(newList);
@@ -19,5 +19,6 @@ public class CodeRunner {
         System.out.println(se.sortAList(newList));
         Optional<Integer> sumOfList = se.sumOptional(newList);
         sumOfList.ifPresent(System.out::println);
+        System.out.println(se.returnFirstItemExceedingZero(newList));
     }
 }

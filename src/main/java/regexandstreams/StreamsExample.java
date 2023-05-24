@@ -42,5 +42,9 @@ public class StreamsExample {
         return l1.stream().reduce(Integer::sum);
     }
 
+    protected int returnFirstItemExceedingZero(List<Integer> listOfIntegers) {
+        return listOfIntegers.stream().filter(i -> i < 0).findFirst().orElseThrow();
+    }
+
 
 }
