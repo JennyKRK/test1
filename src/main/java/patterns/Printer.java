@@ -1,4 +1,4 @@
-package Patterns;
+package patterns;
 
 public class Printer {
     private IWelcome iwelcome;
@@ -16,7 +16,7 @@ public class Printer {
         this.iwelcome = iwelcome;
     }
 
-    public void printMe(){
+    public void printMe() {
         getIwelcome().printWelcome();
     }
 }

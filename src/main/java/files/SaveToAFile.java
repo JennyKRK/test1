@@ -1,37 +1,35 @@
-package Files;
+package files;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 
 public class SaveToAFile {
     public static void main(String[] args) throws FileNotFoundException {
-        String[] names = {"Allie","Bob","Cillian","Dorian","Emil"};
-        saveToFileAndReplace(names,"src/main/java/Files/Proba.txt");
-        saveToFileAndAdd(names,"src/main/java/Files/Proba2.txt");
+        String[] names = {"Allie", "Bob", "Cillian", "Dorian", "Emil"};
+        saveAndReplace(names, "src/main/java/Files/Proba.txt");
+        saveToFileAndAdd(names, "src/main/java/Files/Proba2.txt");
     }
 
 
-
-    public static void saveToFileAndReplace(String[] names, String fileName) throws FileNotFoundException {
+    public static void saveAndReplace(String[] names, String name) throws FileNotFoundException {
         try {
-            PrintWriter pw = new PrintWriter(fileName);
+            PrintWriter pw = new PrintWriter(name);
+
             for (String s : names) {
                 pw.println(s);
             }
             pw.close();
-        }
-        catch(FileNotFoundException e){
-            System.out.println("File not found " + fileName);
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found " + name);
         }
     }
 
-    public static void saveToFileAndAdd(String[] names, String fileName){
+    public static void saveToFileAndAdd(String[] names, String fileName) {
         try {
             PrintWriter pw = new PrintWriter(new FileOutputStream(new File(fileName), true));
-            for (String s: names){
+            for (String s : names) {
                 pw.println(s);
             }
             pw.close();

@@ -1,13 +1,14 @@
-package Together;
+package together;
 
-public class LessAbstractProphet extends AbstractProphet{
+public class LessAbstractProphet extends AbstractProphet {
     protected String myName;
+
     protected LessAbstractProphet(String myMessage, String myName) {
         super(myMessage);
         this.myName = myName;
     }
 
-    protected String getMyName(){
+    protected String getMyName() {
         return myName;
     }
 

@@ -1,9 +1,7 @@
-package Together;
-
-import java.util.logging.Level;
+package together;
 
 public class Test {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Printing p = new Printing();
         p.printIt();
         Prophet prop = new Prophet("Lebioda");
@@ -11,7 +9,7 @@ public class Test {
         SuperProphet sp = new SuperProphet("Nabuchobonozor");
         sp.setMessage("The winter is coming");
         sp.prophesy();
-        LessAbstractProphet lap = new LessAbstractProphet("The night is dark and full of terrors","Melisandre");
+        LessAbstractProphet lap = new LessAbstractProphet("The night is dark", "Melisandre");
         lap.printMyMessage();
     }
 }

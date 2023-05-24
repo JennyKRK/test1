@@ -1,8 +1,9 @@
-package Together;
+package together;
 
-public class SuperProphet extends Prophet{
+public class SuperProphet extends Prophet {
     private String message;
-    public SuperProphet(String name){
+
+    public SuperProphet(String name) {
         super(name);
     }
 
@@ -14,7 +15,7 @@ public class SuperProphet extends Prophet{
         this.message = message;
     }
 
-    public void prophesy(){
+    public void prophesy() {
         super.prophesy();
         System.out.println(getMessage());
     }

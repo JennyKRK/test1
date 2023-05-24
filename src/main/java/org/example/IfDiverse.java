@@ -2,31 +2,30 @@ package org.example;
 
 public class IfDiverse {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         simpleif("John");
         switchName("Jimmy");
         switchName("Allie");
-        divide(100,10);
-        divide(20000,0);
+        divide(100, 10);
+        divide(20000, 0);
     }
 
-    static void simpleif(String name){
-        if (name.equals("John")){
+    static void simpleif(String name) {
+        if (name.equals("John")) {
             System.out.println("hello John");
-        }
-        else {
+        } else {
             System.out.println("go away, please");
         }
     }
 
-    static void switchName(String name){
-        switch (name){
+    static void switchName(String name) {
+        switch (name) {
             case "John" -> {
                 System.out.println("Hello John");
             }
 
             case "Jimmy" -> {
-            System.out.println("Hello Jimmy");
+                System.out.println("Hello Jimmy");
             }
 
             default -> {
@@ -35,9 +34,10 @@ public class IfDiverse {
         }
     }
 
-    static void divide(int a, int b){
-        try {System.out.println(a/b);}
-        catch (Exception e) {
+    static void divide(int a, int b) {
+        try {
+            System.out.println(a / b);
+        } catch (Exception e) {
             System.out.println("wrong numbers");
             System.out.println(e.toString());
         }

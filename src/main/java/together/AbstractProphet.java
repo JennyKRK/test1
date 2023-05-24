@@ -1,7 +1,8 @@
-package Together;
+package together;
 
 public abstract class AbstractProphet {
     protected String myMessage;
+
     protected AbstractProphet(String myMessage) {
         this.myMessage = myMessage;
     }
@@ -14,7 +15,7 @@ public abstract class AbstractProphet {
         this.myMessage = myMessage;
     }
 
-    protected void printMyMessage(){
+    protected void printMyMessage() {
         System.out.println(getMyMessage());
     }
 }

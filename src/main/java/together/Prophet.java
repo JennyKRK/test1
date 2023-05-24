@@ -1,9 +1,10 @@
-package Together;
+package together;
 
 public class Prophet {
 
     protected String name;
-    public Prophet(String name){
+
+    public Prophet(String name) {
         this.name = name;
     }
 
@@ -15,7 +16,7 @@ public class Prophet {
         this.name = name;
     }
 
-    protected void prophesy(){
+    protected void prophesy() {
         System.out.println("Hello, my dear. My name is " + getName() + " I am a prophet");
     }
 }

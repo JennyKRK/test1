@@ -1,4 +1,5 @@
-package Files;
+package files;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -24,8 +25,7 @@ public class ReadFromFiles {
             while ((line = br.readLine()) != null) {
                 System.out.println(line);
             }
-        }
-        catch(FileNotFoundException e){
+        } catch (FileNotFoundException e) {
             System.out.println("File not found: " + fileName);
         }
     }
@@ -35,23 +35,21 @@ public class ReadFromFiles {
             String content = null;
             content = Files.readString(Paths.get(fileName));
             System.out.println(content);
-        }
-        catch (FileNotFoundException e){
+        } catch (FileNotFoundException e) {
             System.out.println("File not found: " + fileName);
         }
     }
 
     public static void readAndModify(String fileName) throws IOException {
         Charset charset = StandardCharsets.UTF_8;
-        try{
+        try {
             String content = null;
             content = Files.readString(Paths.get(fileName));
             content = content.toLowerCase();
             Files.write(Path.of(fileName), content.getBytes(charset));
 
-        }
-
-        catch (FileNotFoundException e){
+        } catch (FileNotFoundException e) {
             System.out.println("File not found: " + fileName);
+        }
     }
-}}
+}
