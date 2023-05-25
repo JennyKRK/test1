@@ -5,15 +5,21 @@ import static org.junit.Assert.*;
 import example.Subject;
 import org.hamcrest.Matchers;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 public class SubjectTest {
 
+    private Subject s1;
+
+    @Before
+    public void createOneSubject(){
+    s1 = new Subject("english");
+    }
 
     @Test
     public void isAverageCorrect(){
-        Subject s = new Subject("Maths");
-        s.addANote(6);
-        s.addANote(4);
+        s1.addANote(6);
+        s1.addANote(4);
         Assert.assertEquals(5.0,5.0,0.01);
     }
 
