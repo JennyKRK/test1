@@ -44,4 +44,33 @@ public class FilesAndFolders {
             System.out.println("This file already exists");
         }
     }
+
+    public static void deleteFolder(String folderPath) {
+        try {
+            File file = new File(folderPath);
+            deleteDirectory(file);
+            file.delete();
+        } catch (Exception e) {
+            System.err.format("Exception: %s", e);
+        }
+    }
+
+    public static void deleteDirectory(File file) {
+        try {
+            //delete folder with its contents
+            for (File subfile : file.listFiles()) {
+                if (subfile.isDirectory()) {
+                    deleteDirectory(subfile);
+                }
+                subfile.delete();
+            }
+        } catch (Exception e) {
+            System.err.format("Exception: %s", e);
+        }
+    }
+
+    public static void addFile(String path) throws Exception {
+        File file = new File(path);
+        file.createNewFile();
+    }
 }

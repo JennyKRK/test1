@@ -52,4 +52,19 @@ public class ReadFromFiles {
             System.out.println("File not found: " + fileName);
         }
     }
+
+    public static void countChar(String fileName) throws IOException {
+        File file = new File(fileName);
+        int nextChar = 0;
+        int linesCounter = 0;
+        int charCounter = 0;
+        BufferedReader reader = Files.newBufferedReader(file.toPath());
+        while ((nextChar = reader.read()) != -1) {
+            charCounter++;
+            if (nextChar == '\n') {
+                linesCounter++;
+            }
+        }
+        System.out.println(linesCounter + " " + charCounter);
+    }
 }
