@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="9.3">
-<file name="C:\Users\longs\Desktop\IT_15032023\AGH najważniejsze\PowtórkaMaj2023\W2\TestAndSmells2\test1\src\main\java\example\SimpleClass.java">
+<file name="C:\Users\longs\Desktop\IT_15032023\AGH najważniejsze\PowtórkaMaj2023\W2\TestAndSmells2\test1\src\main\java\useful\CodeRunner.java">
 </file>
-<file name="C:\Users\longs\Desktop\IT_15032023\AGH najważniejsze\PowtórkaMaj2023\W2\TestAndSmells2\test1\src\main\java\example\Subject.java">
+<file name="C:\Users\longs\Desktop\IT_15032023\AGH najważniejsze\PowtórkaMaj2023\W2\TestAndSmells2\test1\src\main\java\useful\VariousExceptions.java">
 </file>
 </checkstyle>
