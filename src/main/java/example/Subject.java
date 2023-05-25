@@ -2,6 +2,7 @@ package example;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class Subject {
     private final String name;
@@ -27,6 +28,21 @@ public class Subject {
             throw new IllegalArgumentException();
         }
         this.notes.add(note);
+    }
+
+    public int sumOfNotes() {
+        if (notes.size() == 0) {
+            return 0;
+        } else {
+            int sum = notes.stream().reduce(Integer::sum).orElse(0);
+            return sum;
+
+        }
+
+    }
+
+    public int countOfNotes() {
+        return this.notes.size();
     }
 
     public double averageNote() {
